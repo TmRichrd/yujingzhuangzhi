@@ -1,0 +1,74 @@
+<template>
+  <div class="app-container">
+    <avue-crud :option="option" :form="form" :data="data" :page.sync="page" @on-load="onLoad"></avue-crud>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      page: {
+        pageSize: 20,
+        total: 0
+      },
+      data: [
+        {
+          ID: "1"
+        }
+      ],
+      option: {
+        excelBtn: true,
+        border: true,
+        index: true,
+        expandLevel: 3,
+        headerAlign: 'center',
+        align: 'center',
+        tree: true,
+        labelWidth: 100,
+        column: [{
+          width: 130,
+          label: 'ID',
+          prop: 'name',
+          search: true
+        }, {
+          label: '性别1',
+          prop: 'sex',
+        }]
+      },
+      form: {
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
+        delivery: false,
+        type: [],
+        resource: '',
+        desc: ''
+      }
+    }
+  },
+  methods: {
+    onLoad (page) {
+      //模拟分页
+      this.page.total = 40
+    },
+    onSubmit () {
+      this.$message('submit!')
+    },
+    onCancel () {
+      this.$message({
+        message: 'cancel!',
+        type: 'warning'
+      })
+    }
+  }
+}
+</script>
+
+<style scoped>
+.line {
+  text-align: center;
+}
+</style>
+
