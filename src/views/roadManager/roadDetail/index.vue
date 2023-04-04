@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-tabs type="card">
+    <el-tabs type="card" class="box-nav">
       <el-tab-pane label="情报板">
         <InfoBoard />
       </el-tab-pane>
