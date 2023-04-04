@@ -1,0 +1,316 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+  color: #fff;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+// avue
+.avue-crud__menu {
+  background-color: transparent;
+}
+.el-card {
+  background-color: transparent;
+}
+.avue-group .el-collapse,
+.avue-group .el-collapse-item__wrap {
+  background-color: transparent;
+}
+
+.el-table {
+  border-radius: 4px;
+  border: none;
+  .el-button--text {
+    color: #ffcd44;
+  }
+}
+.el-table th {
+  text-align: center;
+  background: #37548e !important;
+}
+.el-table::before {
+  height: 0;
+}
+.el-table th.is-leaf,
+.el-table td {
+  text-align: center;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+.el-table tr {
+  background: #4d6ba5 !important;
+}
+.el-table tr:hover > td {
+  background: #6b84b4 !important;
+}
+.el-table__body tr.current-row > td {
+  background: #6b84b4 !important;
+}
+.pagination {
+  padding: 20px 0;
+}
+.el-pagination,
+.el-pagination__total,
+.el-pagination__jump {
+  color: #fff !important;
+}
+.el-pagination button:disabled {
+  color: #999;
+  // background: @btnPrimary2;
+}
+// .el-pagination .el-input{
+// }
+.el-pagination {
+  input {
+    height: 30px !important;
+    margin-top: -2rpx;
+  }
+}
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+  padding: 0 4px !important;
+  border-radius: 4px;
+  background: none;
+  color: #fff;
+  margin: 0 5px;
+  // background: @btnPrimary2;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  background: none;
+  color: #fff;
+  border: 1px solid $btnPrimary2;
+}
+.el-pagination.is-background .btn-next.disabled,
+.el-pagination.is-background .btn-next:disabled,
+.el-pagination.is-background .btn-prev.disabled,
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .el-pager li.disabled {
+  background: #999;
+  color: #666;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background: $btnPrimary2;
+}
+.pagination {
+  text-align: center;
+}
+.el-card {
+  border: none;
+  background-color: #0a2354;
+  .el-card__header {
+    color: #fff;
+    border-bottom: 1px solid #274785;
+  }
+}
+.el-table__body tr.hover-row > td.el-table__cell {
+  background-color: #4d6ba5;
+}
+.el-table td.el-table__cell {
+  border-bottom: 1px solid #ebeef5;
+}
+.el-table tr:hover > td {
+  background-color: transparent !important;
+}
+.el-table__fixed::before {
+  background-color: transparent;
+}
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+  background-color: transparent;
+}
+.data-icons .item-info > span {
+  color: #fff;
+}
+.el-collapse {
+  border: none;
+  .el-form-item__label {
+    color: #fff;
+  }
+}
+.el-dialog {
+  color: #fff;
+  background: #0c1933 !important;
+}
+.avue-crud__dialog__header {
+  .el-dialog__title {
+    color: #fff;
+  }
+}
+
+.avue-dialog__footer.avue-dialog__footer--right {
+  background: #0c1933 !important;
+}
+.el-collapse-item__wrap {
+  border: none;
+}
+.avue-dialog .el-dialog__header {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.avue-dialog__footer {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.el-input__inner {
+  color: #fff !important;
+  background: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.el-textarea__inner {
+  color: #fff;
+  width: 100%;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.el-select-dropdown {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: #0a2354 !important;
+  .el-select-dropdown__item {
+    color: #fff !important;
+  }
+  .el-select-dropdown__item:hover {
+    background: #346cd7 !important;
+  }
+  .el-select-dropdown__item {
+    background: none !important;
+  }
+}
+.popper__arrow::after {
+  border-bottom-color: #346cd7 !important;
+}
+.el-button--default {
+  background-color: transparent;
+  color: #346cd7;
+  border: 1px solid #346cd7 !important;
+}
+.el-button--default:hover,
+.el-button--default:active,
+.el-button--default:focus {
+  background-color: transparent;
+  color: #346cd7;
+  border: 1px solid #346cd7 !important;
+}
+
+.el-picker-panel {
+  color: #fff !important;
+  background: #0a2354 !important;
+  border: none !important;
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.2);
+  .el-date-range-picker__content.is-left {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .el-date-table th {
+    color: #fff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .el-date-table td.in-range,
+  .el-date-table td.in-range div {
+    background: #123882;
+  }
+  .el-date-table td.in-range div:hover {
+    color: #fff !important;
+    background: #177ddc;
+  }
+}
+.el-picker-panel__body {
+  .el-picker-panel__icon-btn,
+  .el-date-picker__header-label {
+    color: #fff;
+  }
+}
+.el-picker-panel__footer {
+  background: #0a2354 !important;
+  .el-button--default,
+  .el-button--default:hover {
+    color: #fff;
+    background: #346cd7;
+    border: 1px solid #346cd7;
+  }
+}
+.el-date-editor .el-range-input {
+  color: #fff;
+  background: none;
+}
+.el-dialog__header {
+  .el-dialog__title {
+    color: #fff;
+  }
+  .el-dialog__body {
+    .el-form {
+      .el-form-item__label {
+        color: #fff;
+      }
+    }
+  }
+}
+.el-radio__label {
+  color: #fff;
+}
+
+.el-menu--horizontal > .el-submenu .el-submenu__title {
+  height: 50px;
+  line-height: 50px;
+}
+.el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+  background-color: #0a3079 !important;
+}
+.el-menu--horizontal>.el-submenu .el-submenu__icon-arrow{
+  display: none;
+}
+
+.el-menu--popup{
+  min-width: 120px;
+  &.el-menu,.el-menu-item{
+     text-align: center;
+      background: #001640 !important;
+      color: #fff !important;
+  }
+  .el-menu-item:hover{
+      background: #0A3079 !important;
+      color: #76A1F7 !important;
+  }
+}
