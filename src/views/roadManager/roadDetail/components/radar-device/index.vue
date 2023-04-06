@@ -34,15 +34,6 @@ export default {
             ]
           },
           {
-            label: '显示文字',
-            prop: 'input1'
-          },
-          {
-            label: '文字颜色',
-            prop: 'input12',
-            type: "color"
-          },
-          {
             type: "select",
             label: "播放模式",
             dicData: [

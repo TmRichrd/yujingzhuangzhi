@@ -2,7 +2,7 @@
   <div class="app-container">
     <el-card>
       <div slot="header" class="clearfix">
-        <span>路段分组</span>
+        <span>日志记录</span>
       </div>
       <avue-crud :option="option" :data="data" :page.sync="page" @on-load="onLoad">
     </avue-crud>
@@ -66,7 +66,8 @@ export default {
       },
       data: [
         {
-          ID: "1"
+          ID: "1",
+          sex:"admin"
         }
       ],
     }

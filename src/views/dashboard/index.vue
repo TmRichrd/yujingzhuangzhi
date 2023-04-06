@@ -5,6 +5,8 @@
         <avue-data-icons :option="option"></avue-data-icons>
       </el-card>
     </div>
+    <baidu-map :scroll-wheel-zoom="true" class="bm-view" @ready="mapReady" :center="center" :zoom="zoom">
+    </baidu-map>
     <el-row :gutter="24" style="margin-bottom: 20px;">
       <el-col :span="12">
         <el-card>
@@ -40,6 +42,8 @@ export default {
   },
   data () {
     return {
+      center: { lng: 116.404, lat: 39.915 },
+      zoom: 15,
       title: 123,
       pieData: {
         luduantotal: 10,
@@ -125,6 +129,9 @@ export default {
     }
   },
   mounted () {
+    this.lng = 116.404
+    this.lat = 39.915
+    this.zoom = 15
     var myChart = echarts.init(document.getElementById('charts1'));
     var myChart2 = echarts.init(document.getElementById('charts2'));
     var myChart3 = echarts.init(document.getElementById('charts3'));
@@ -183,7 +190,7 @@ export default {
         lineStyle: {
           color: "#fff"
         },
-        textStyle:{
+        textStyle: {
           color: "#fff"
         }
 
@@ -247,6 +254,12 @@ export default {
     // window.addEventListener('resize', this.reDraw)
   },
   methods: {
+    mapReady ({ BMap, map }) { // 地图初始化完成-添加自定义样式
+      // map.setMapStyle({
+      //   styleJson: BMapJson
+      // })
+      map.setMapStyleV2({ styleId: 'b2a5cf3f2709221ab9a68e0872eec809' })
+    },
     reDraw () {
       if (this.myChart)
       {
@@ -299,5 +312,11 @@ export default {
 
 #charts1 {
   height: 200px;
+}
+
+.bm-view {
+  width: 100%;
+  height: 443px;
+  margin-bottom: 20px;
 }
 </style>

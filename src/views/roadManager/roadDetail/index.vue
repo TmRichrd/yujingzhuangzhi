@@ -7,9 +7,9 @@
       <el-tab-pane label="音柱装置">
         <Sound/>
       </el-tab-pane>
-      <el-tab-pane label="雷达装置">
+      <!-- <el-tab-pane label="雷达装置">
         <RadarDevice />
-      </el-tab-pane>
+      </el-tab-pane> -->
     </el-tabs>
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
     RadarDevice,
     Sound
   },
+  
   data () {
     return {
 

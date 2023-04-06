@@ -8,6 +8,9 @@
         <template slot-scope="scope" slot="menuLeft">
           <el-button type="primary" icon="el-icon-plus" size="small" @click="handleAdd">新增</el-button>
         </template>
+        <template slot-scope="scope" slot="menu">
+          <el-button type="text" icon="el-icon-edit" size="small" @click="handleAdd">编辑</el-button>
+        </template>
       </avue-crud>
     </el-card>
     <el-dialog title="路段分组" :visible.sync="dialogVisible" :before-close="handleClose">
@@ -15,7 +18,7 @@
         <el-row>
           <el-col :span="13" :offset="4">
             <el-form-item label="分组名称:">
-              <el-input></el-input>
+              <el-input placeholder="请输入分组名称"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -124,5 +127,8 @@ export default {
   color: #333;
   background: #999;
   border-color: #999;
+}
+.el-form-item__label{
+  color: #fff;
 }
 </style>

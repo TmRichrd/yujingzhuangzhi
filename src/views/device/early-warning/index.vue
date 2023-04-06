@@ -27,7 +27,6 @@ export default {
         addBtn: false,
         searchIndex: 3,
         searchIcon: true,
-        editBtn: false,
         column: [
           {
             width: 130,
@@ -58,6 +57,9 @@ export default {
           {
             label: '电量',
             prop: 'sex',
+          },
+          {
+            label:"装置门"
           },
           {
             label: "运营商"

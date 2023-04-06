@@ -45,13 +45,14 @@ export default {
         total: 0
       },
       option: {
-        size:"medium",
+        size: "medium",
         border: false,
         index: true,
         filterBtn: false,
         headerAlign: 'center',
         align: 'center',
         dialogWidth: "40%",
+        addBtn: false,
         column: [
           {
             label: 'ID',

@@ -22,22 +22,29 @@ export default {
         column: [
           {
             label: "音柱序列号",
-            prop: "id"
+            prop: "id",
+            span: 5,
           },
 
           {
             label: "播报文字",
-            prop: "text"
+            prop: "text",
+            span: 5,
+            offset: 4,
           },
           {
             label: "音量大小",
             type: "slider",
-            prop: "value"
+            prop: "value",
+            span: 5,
+            offset: 4,
           },
           {
             label: "语音声音",
             type: "select",
             prop: "sound",
+            span: 5,
+            offset: 0,
             dicData: [
               {
                 label: "男声",
