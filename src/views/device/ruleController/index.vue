@@ -66,6 +66,10 @@ export default {
           //   span: 20
           // },
           {
+            label:"时长",
+            span: 13
+          },
+          {
             label: "播放文字",
             prop: "mode",
             span: 13
