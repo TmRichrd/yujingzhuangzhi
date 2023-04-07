@@ -5,9 +5,12 @@
         <span>基本信息</span>
       </div>
       <avue-form :option="option" @submit="submit" v-model="form">
+        <template slot="kongzhi">
+          <el-button size="medium" type="primary" block @click="handleSetRule">设置</el-button>
+        </template>
       </avue-form>
     </el-card>
-    <el-card>
+    <!-- <el-card>
       <div slot="header" class="clearfix">
         <span>运行方案</span>
       </div>
@@ -16,7 +19,7 @@
           <el-button size="medium" type="primary" block @click="handleSetRule">设置</el-button>
         </template>
       </avue-form>
-    </el-card>
+    </el-card> -->
   </div>
 </template>
 
@@ -69,38 +72,38 @@ export default {
         labelWidth: 110,
         labelPosition: "top",
         column: [
-          {
-            label: '预警装置',
-            prop: 'input',
-            type: 'select',
-            span: 5,
-            labelPosition: "right",
-            multiple: true,
-            dicData: [
-              {
-                label: "装置1",
-                value: 1
-              }
-            ]
-          },
+          // {
+          //   label: '预警装置',
+          //   prop: 'input',
+          //   type: 'select',
+          //   span: 5,
+          //   labelPosition: "right",
+          //   multiple: true,
+          //   dicData: [
+          //     {
+          //       label: "装置1",
+          //       value: 1
+          //     }
+          //   ]
+          // },
           {
             label: '名称设置',
             prop: 'input1',
             span: 5,
-            offset: 4,
+            offset: 0,
           },
-          {
-            label: '显示文字',
-            prop: 'input1',
-            span: 5,
-            offset: 4,
-          },
+          // {
+          //   label: '显示文字',
+          //   prop: 'input1',
+          //   span: 5,
+          //   offset: 4,
+          // },
           {
             label: '文字颜色',
             prop: 'input12',
             type: "color",
             span: 5,
-            offset: 0,
+            offset: 4,
           },
           {
             label: '输入安装地点',
@@ -112,17 +115,23 @@ export default {
             label: "地图定位",
             prop: "map",
             span: 5,
-            offset: 4,
+            offset: 0,
           },
           {
             label: "电量情况",
             span: 5,
-            offset: 0,
+            offset: 4,
           },
           {
             label: "在线状态",
             span: 5,
-            offset: 4,
+            offset: 4
+          },
+          {
+            label: "规则控制",
+            prop: "kongzhi",
+            span: 5,
+            offset: 0,
           }
         ]
       },

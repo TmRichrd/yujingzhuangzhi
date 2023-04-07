@@ -26,12 +26,12 @@ export default {
             span: 5,
           },
 
-          {
-            label: "播报文字",
-            prop: "text",
-            span: 5,
-            offset: 4,
-          },
+          // {
+          //   label: "播报文字",
+          //   prop: "text",
+          //   span: 5,
+          //   offset: 4,
+          // },
           {
             label: "音量大小",
             type: "slider",
@@ -44,7 +44,7 @@ export default {
             type: "select",
             prop: "sound",
             span: 5,
-            offset: 0,
+            offset: 4,
             dicData: [
               {
                 label: "男声",

@@ -5,7 +5,7 @@
         <span>规则控制</span>
       </div>
       <avue-crud :option="option" :data="data" :page.sync="page" @on-load="onLoad">
-        <template slot="timeForm">
+        <!-- <template slot="timeForm">
           <el-row :gutter="8">
             <el-col :span="5">
               <el-select></el-select>
@@ -25,7 +25,7 @@
               <el-select></el-select>
             </el-col>
           </el-row>
-        </template>
+        </template> -->
       </avue-crud>
     </el-card>
   </div>
@@ -59,24 +59,22 @@ export default {
             prop: "id",
             display: false,
           },
+          // {
+          //   label: "起止时间",
+          //   prop: "time",
+          //   formslot: true,
+          //   span: 20
+          // },
           {
-            label: "起止时间",
-            prop: "time",
-            formslot: true,
-            span: 20
-          },
-          {
-            label: "工作模式",
+            label: "播放文字",
             prop: "mode",
-            type: "select",
             span: 13
           },
           {
-            label: "亮度",
+            label: "显示文字",
             prop: "liangdu",
-            type: "select",
             span: 13
-          }
+          },
         ]
       }
     }

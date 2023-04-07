@@ -5,6 +5,9 @@
         <span>预警装置</span>
       </div>
       <avue-crud :option="option" :data="data" :page.sync="page" @on-load="onLoad">
+        <template slot="menu" slot-scope="{row,index}">
+          <el-button @click="handleView" type="text" icon="el-icon-edit" size="small">编辑</el-button>
+        </template>
       </avue-crud>
     </el-card>
   </div>
@@ -27,6 +30,7 @@ export default {
         addBtn: false,
         searchIndex: 3,
         searchIcon: true,
+        editBtn:false,
         column: [
           {
             width: 130,
@@ -77,6 +81,9 @@ export default {
     }
   },
   methods: {
+    handleView () {
+      this.$router.push('/roadManager/roadDetail')
+    },
     onLoad (page) {
       //模拟分页
       this.page.total = 40

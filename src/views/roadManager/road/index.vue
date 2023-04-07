@@ -5,9 +5,9 @@
         <span>路段列表</span>
       </div>
       <avue-crud :option="option" :data="data" :page.sync="page" @on-load="onLoad">
-        <template slot="menu" slot-scope="{row,index}">
+        <!-- <template slot="menu" slot-scope="{row,index}">
           <el-button @click="handleView" type="text" icon="el-icon-edit" size="small">编辑</el-button>
-        </template>
+        </template> -->
       </avue-crud>
     </el-card>
   </div>
@@ -30,7 +30,7 @@ export default {
         dialogWidth: "40%",
         searchIndex: 3,
         searchIcon: true,
-        editBtn: false,
+        editBtn: true,
         column: [
           {
             width: 130,
@@ -55,6 +55,21 @@ export default {
             label: '路段描述',
             prop: 'sex',
             type: "textarea",
+            span: 12,
+            offset: 2,
+            rules: [
+              {
+                required: true,
+                message: "请输入路段描述",
+                trigger: "blur"
+              }
+            ]
+          },
+          {
+            label: '预警装置',
+            prop: 'sex',
+            type: "select",
+            multiple: true,
             span: 12,
             offset: 2,
             rules: [
